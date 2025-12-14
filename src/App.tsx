@@ -1,5 +1,20 @@
 import React, { useState, useRef } from 'react';
-import { Download, Plus, Trash2, User, Briefcase, GraduationCap, Wrench, Layout, Palette, Image as ImageIcon, Upload, Grid, Type, Layers, Phone, Mail, MapPin, Globe } from 'lucide-react';
+import {
+  Download,
+  Plus,
+  Trash2,
+  User,
+  Briefcase,
+  GraduationCap,
+  Wrench,
+  Layout,
+  Palette,
+  Image as ImageIcon,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+
 
 // --- Tipe Data ---
 type Experience = {
@@ -1344,7 +1359,7 @@ export default function App() {
               <button onClick={addExperience} className="text-blue-600 hover:bg-blue-50 p-1 rounded-full"><Plus className="w-5 h-5" /></button>
             </div>
             <div className="space-y-6">
-              {experiences.map((exp, idx) => (
+              {experiences.map((exp) => (
                 <div key={exp.id} className="p-4 bg-slate-50 rounded-lg border border-slate-100 relative group">
                   <button onClick={() => removeExperience(exp.id)} className="absolute top-2 right-2 text-red-400 hover:text-red-600 opacity-0 group-hover:opacity-100 transition-opacity"><Trash2 className="w-4 h-4" /></button>
                   <div className="space-y-3">
